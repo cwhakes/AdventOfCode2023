@@ -1,11 +1,11 @@
+#[cfg(test)]
+mod test;
+
 use std::fmt::Display;
-use std::fs::File;
-use std::io::Read;
+use std::fs;
 
 fn main() {
-	let mut buf = String::new();
-	let mut file = File::open("input/01/input").unwrap();
-	file.read_to_string(&mut buf).unwrap();
+	let buf = fs::read_to_string("input/01/input").unwrap();
 
 	let answer = get_answer1(&buf);
 	println!("{}", answer);
