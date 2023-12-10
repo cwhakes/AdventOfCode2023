@@ -2,7 +2,16 @@
 name = "day07"
 version = "0.1.0"
 edition = "2021"
+default-run = "idiomatic"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[bin]]
+name = "main"
+path = "src/main.rs"
+
+[[bin]]
+name = "idiomatic"
+path = "src/idiomatic.rs"
 
 [dependencies]
